@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useSocket } from '../context/SocketContext';
-import { Activity, Truck, MapPin, RefreshCw, Navigation, Zap, Users, Clock, AlertTriangle } from 'lucide-react';
+import { Activity, Truck, MapPin, RefreshCw, Navigation, AlertTriangle } from 'lucide-react';
 
 // ── Fix Leaflet default icon paths broken by webpack ──────────────────────────
 delete L.Icon.Default.prototype._getIconUrl;

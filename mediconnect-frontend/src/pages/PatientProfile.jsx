@@ -3,7 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import {
   User, Calendar, Droplets, Phone, Mail, Activity,
-  FileText, Pill, Clock, Edit, Save, LogOut, Shield, Trash2, DollarSign, Printer
+  Pill, Clock, Edit, Save, LogOut, Shield, Trash2, DollarSign, Printer
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 

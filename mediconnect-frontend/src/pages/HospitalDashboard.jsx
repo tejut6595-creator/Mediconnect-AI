@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSocket } from '../context/SocketContext';
-import { Activity, Users, Truck, AlertTriangle, MapPin, Clock, TrendingUp, Bell, CheckCircle, XCircle } from 'lucide-react';
+import { Activity, Users, Truck, AlertTriangle, MapPin, Clock, TrendingUp, Bell, CheckCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const HospitalDashboard = () => {
   const { connected, emergencyAlerts, hospitals, ambulances, liveStats, markAlertRead } = useSocket();
-  const [selectedAlert, setSelectedAlert] = useState(null);
   const [filter, setFilter] = useState('all');
 
   const filteredAlerts = emergencyAlerts.filter(a => {

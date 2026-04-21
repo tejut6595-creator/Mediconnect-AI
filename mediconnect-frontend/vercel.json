@@ -1,13 +1,10 @@
 {
   "version": 2,
   "name": "mediconnect-ai",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
-    }
-  ],
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "build",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "create-react-app",
   "routes": [
     {
       "src": "/static/(.*)",
@@ -17,9 +14,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "env": {
-    "REACT_APP_API_URL": "https://mediconnect-api.onrender.com/api",
-    "REACT_APP_SOCKET_URL": "https://mediconnect-api.onrender.com"
-  }
+  ]
 }
