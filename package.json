@@ -1,0 +1,8 @@
+{
+  "name": "mediconnect-ai",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd mediconnect-frontend && npm install --legacy-peer-deps && npm run build",
+    "start": "cd mediconnect-backend && node server.js"
+  }
+}
